@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Templates/Header.cshtml";
+}
+<body class="bg-primary">
+
+    <div class="container">
+        <!-- Outer Row -->
+        <h1 class="font-weight-bold text-center mt-5 pt-2 text-light">Form Login</h1>
+        <div class="row justify-content-center mt-3">
+            <div class="col-md-5">
+                <div class="card  rounded shadow-lg mt-2">
+                    <div class="card-body p-0" style="background-color: #e2edff">
+                        <!-- Nested Row within Card Body -->
+                        <div class="row-10">
+                            <div class="col">
+                                <div class="pt-5 pl-5 pr-5">
+                                    <div class="text-center">
+
+                                        <h1 class="h4 text-gray-900 mb-5 mt-4">Hallo, Welcome !</h1>
+                                    </div>
+                               
+                                    <form method="post" id="loginForm">
+                                        <div id="errorMessage" class="alert alert-warning text-danger" role="alert" style="display:none">
+                                            Email atau Password Salah !
+                                        </div>
+
+                                        <div class="form-group">
+                                            <input type="text" class="form-control form-control-user mb-3" id="email" aria-describedby="emailHelp" placeholder="Email" required>
+                                         </div>
+                                        <div class="form-group">
+                                            <input type="password" class="form-control form-control-user" id="password" placeholder="Password" required >
+                                        </div>          
+                                              <button type="submit" class="btn btn-primary btn-user btn-block mt-4 ">
+                                                            Login
+                                                        </button>
+                                    </form>
+                                    <hr>
+
+                                    <div class="text-center">
+                                        <a class="small" href="">Create an Account!</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <img src="~/assets/img/wave.svg"/>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
