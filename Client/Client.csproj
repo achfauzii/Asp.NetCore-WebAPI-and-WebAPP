@@ -20,4 +20,8 @@
     <Folder Include="wwwroot\assets\img\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\MyProject\MyProject.csproj" />
+  </ItemGroup>
+
 </Project>

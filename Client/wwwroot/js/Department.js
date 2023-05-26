@@ -89,7 +89,10 @@ function Save() {
             type: 'POST',
             url: 'http://localhost:8042/api/Departments',
             data: JSON.stringify(Department),
-            contentType: "application/json; charset=utf-8"
+            contentType: "application/json; charset=utf-8",
+            headers: {
+                'Authorization': 'Bearer ' + sessionStorage.getItem('tokenJWT')
+            },
         }).then((result) => {
             $('#modal-add').modal('hide');
             $('#modal-add').on('hidden.bs.modal', function () {
@@ -144,6 +147,9 @@ function Delete(id, name) {
                 url: "http://localhost:8042/api/Departments/Id?id=" + id,
                 type: "DELETE",
                 dataType: "json",
+                headers: {
+                    'Authorization': 'Bearer ' + sessionStorage.getItem('tokenJWT')
+                },
                 success: function (result) {
                     if (result.status == 200) {
                         //$('#confirm-delete').off('click'); //Jika menggunakan modal bootrsap
@@ -200,6 +206,9 @@ function GetById(id) {
         url: "http://localhost:8042/api/Departments/" + id,
         type: "GET", contentType: "application/json; charset=utf-8",
         dataType: "json",
+        headers: {
+            'Authorization': 'Bearer ' + sessionStorage.getItem('tokenJWT')
+        },
         success:
             function (result) {
             //debugger;

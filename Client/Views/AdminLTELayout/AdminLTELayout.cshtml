@@ -10,7 +10,8 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="~/AdminLTE-3.2.0/plugins/fontawesome-free/css/all.min.css">
     <link rel="stylesheet" href="~/AdminLTE-3.2.0/plugins/fontawesome-free/css/all.min.css">
-
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <!-- DataTables -->
     <link rel="stylesheet" href="~/AdminLTE-3.2.0/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" href="~/AdminLTE-3.2.0/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
@@ -433,12 +434,12 @@
                         </li>
                         </ul>
                         </li>*@
-                    
+
 
                         <li class="nav-item">
-                            <a href="@Url.Action("Index", "Deshboard")" class="nav-link">
-                                <i class="nav-icon fas fa-tachometer-alt"></i>
-                                <p>Dashboard</p>
+                            <a href="@Url.Action("Index", "Charts")" class="nav-link">
+                                <i class="nav-icon fas fa-chart-pie"></i>
+                                <p>Charts</p>
 
                             </a>
                         </li>
@@ -451,11 +452,11 @@
                             </a>
                         </li>
 
-                        <li class="nav-item " >
-                            <button class="nav-link  text-left text-white btn-dark border-0" id="logout" onclick="Logout()">
+                        <li class="nav-item ">
+                            <a href="@Url.Action("Logout", "Auth")" class="nav-link  text-left text-white btn-dark border-0" id="logout" onclick="Logout()">
                                 <i class="nav-icon  fas  fa-reply "></i>
                                 <p>Logout</p>
-                            </button>
+                            </a>
                         </li>
 
                         @*
@@ -881,6 +882,7 @@
     <script src="~/AdminLTE-3.2.0/dist/js/adminlte.min.js"></script>
     <!-- AdminLTE for demo purposes -->
     <script src="~/AdminLTE-3.2.0/dist/js/demo.js"></script>
+
     <!-- Page specific script -->
     <!-- script untuk digunakan berulang2 -->
     @RenderSection("script",required:false)
