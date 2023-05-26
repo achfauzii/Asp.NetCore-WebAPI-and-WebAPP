@@ -68,17 +68,18 @@ namespace Client.Controllers
             }
 
             return View();*/
-            return RedirectToAction("Index", "Departments");
+            HttpContext.Session.SetString("tokenJWT", token);
+            return RedirectToAction("Index", "Charts");
         }
 
 
-     /*   public IActionResult Logout()
+        public IActionResult Logout()
         {
             HttpContext.Session.Remove("tokenJWT");
             HttpContext.Session.Clear();
             return View("Login");
 
-        }*/
+        }
 
     }
 

@@ -68,7 +68,7 @@ $(document).ready(function () {
         //debugger;
         event.preventDefault();
         var login = new Object
-        //debugger;
+        debugger;
         login.email = $('#email').val();
         login.password = $('#password').val();
         $.ajax({
@@ -81,8 +81,8 @@ $(document).ready(function () {
   
                 var token = result.token;
                 sessionStorage.setItem("tokenJWT",token);
-   
-                $.post("/Auth/Login", {/*token*/})
+
+                $.post("/Auth/Login", {token })
                     .done(function () {
                     
                         Swal.fire({
@@ -95,7 +95,7 @@ $(document).ready(function () {
                         })
                             .then(successAlert => {
                                 if (successAlert) {
-                                    location.replace("/Departments/Index")
+                                    location.replace("/Charts/Index")
                                 }
 
                             })

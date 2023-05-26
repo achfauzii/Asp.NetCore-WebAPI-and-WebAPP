@@ -8,7 +8,7 @@ using System.Net;
 
 namespace MyProject.Controllers
 {
-    [Authorize]
+    //[Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class DepartmentsController : ControllerBase
